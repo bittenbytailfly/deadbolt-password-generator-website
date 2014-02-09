@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        h1 {
+            background: url('/images/deadbolt-logo.png');
+            width: 198px;
+            height: 42px;
+        }
+        h1 span { display: none; }
+        h1 a { 
+            display: block;
+            height: 42px;
+            width: 198px;
+        }
+        .navbar {
+            background-color: #444;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+        #social-buttons{ margin-top:5px;}
+        .jumbotron {
+            background: url('/images/squared_metal.png');
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a href="/"><span>Deadbolt Password Generator</span></a></h1>
+            </div>
+            <div class="navbar-collapse collapse">
+                
+            </div><!--/.navbar-collapse -->
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h2>Turn memorable phrases into strong passwords</h2>
+            <p>If you struggle to come up with unique, strong passwords or use the same password for everything then Deadbolt Password Generator is the solution you've been waiting for.</p>
+            <div class="row">
+                <div id="web-store" class="col-md-4">
+                    <img src="images/available-in-the-chrome-web-store.png" class="img-responsive" />
+                </div>
+                <div id="social-buttons" class="col-md-8">
+                    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.deadboltpasswordgenerator.com&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:225px; height:21px;" allowtransparency="true"></iframe>
+                    <br />
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.deadboltpasswordgenerator.com" data-via="bittenbytailfly">Tweet</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs');</script>
+                    <br />
+                    <!-- Place this tag where you want the +1 button to render. -->
+                    <div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://www.deadboltpasswordgenerator.com"></div>
+
+                    <!-- Place this tag after the last +1 button tag. -->
+                    <script type="text/javascript">
+                        window.___gcfg = { lang: 'en-GB' };
+
+                        (function () {
+                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                            po.src = 'https://apis.google.com/js/platform.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                        })();
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-7">
+                <h3>How does it work?</h3>
+                <p>On a very simple level, Deadbolt uses the numeric values of the characters used in your memorable phrase and puts those numbers through a series of calculations. 
+                  The resulting numbers are then turned into your strong password. The calculations are deliberately inaccurate, losing information along the way to ensure they are irreversible, however the same phrase will always generate the same password.</p>
+                <p>If you'd like a more detailed explanation, Deadbolt is open source and the code is avialable to view on GitHub.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-responsive img-rounded" src="/images/screenshot-home.png" alt="Deadbolt home screen">
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-5">
+                <img class="img-responsive img-rounded" src="/images/screenshot-home.png" alt="Deadbolt home screen">
+            </div>
+            <div class="col-md-7">
+                <h3>What makes Deadbolt different to a password vault?</h3>
+                <p>
+                    Unlike 'password vaults', that store your all your passwords securely behind a master password, Deadbolt never stores or transmits any personal information whatsoever leaving you fully in control of your data.
+                </p>
+                <p>Since passwords are never stored, they only really exist between the time you generate them, until the time you've used them.</p>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-7">
+                <h3>What if I'm not using Google Chrome?</h3>
+                <p>
+                    Presently the best experience for using Deadbolt is to install the Chrome Extension, however you can also use the web based version of the generator, which works in the same way
+                    available here.
+                </p>
+                <p>The online version is also optimised for the popular smart phones and tablets.</p>
+            </div>
+            <div class="col-md-5">
+                <img class="img-responsive img-rounded" src="/images/screenshot-home.png" alt="Deadbolt home screen">
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-5">
+                <img class="img-responsive img-rounded" src="/images/screenshot-home.png" alt="Deadbolt home screen">
+            </div>
+            <div class="col-md-7">
+                <h3>Can I customise it?</h3>
+                <p>
+                    Deadbolt allows you to change a number of options (e.g. password length, whether or not to include symbols etc.) and also allows you to add a PIN number to alter the final password. This
+                    PIN number is simply thrown in with the other calculations to ensure your password is less likely to be compromised, even if someone knew the memorable phrase used to generate it.
+                </p>
+                <p>You can keep track of all your various customisations in the Chrome Extension by using profiles. These are expecially useful if a site has restrictions on password lengths.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
