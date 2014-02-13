@@ -1,0 +1,220 @@
+﻿h1 {
+    background: url('/images/deadbolt-logo.png');
+    width: 198px;
+    height: 42px;
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+    h1 span {
+        display: none;
+    }
+
+    h1 a {
+        display: block;
+        height: 42px;
+        width: 198px;
+    }
+
+h2 {
+    font-size: 50px;
+}
+
+    h2 strong {
+        color: #c00;
+        font-weight: normal;
+    }
+
+.profile {
+    width: 273px;
+}
+
+.navbar, #social-buttons {
+    background-color: #444;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 10px;
+    color: #ccc;
+}
+
+.jumbotron, .footer {
+    background: url('/images/squared_metal.png');
+    padding: 30px 0;
+}
+
+.jumbotron {
+    margin-bottom: 1em;
+}
+
+.footer {
+    margin-top: 30px;
+}
+
+.nav .active a {
+    border-radius: 10px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 46px;
+    font-weight: lighter;
+    letter-spacing: -2px;
+    color: #c00;
+}
+
+.checkbox {
+    margin-top: 0;
+}
+
+dl {
+    border-right: solid 1px #eee;
+    display: inline-block;
+    width: 40px;
+}
+
+dt {
+    color: #999;
+    text-align: center;
+}
+
+dd {
+    text-align: center;
+}
+
+dl.first {
+    border-left: solid 1px #eee;
+}
+
+#passPhraseContextArea {
+    margin-top: 5px;
+    font-size: .8em;
+    padding: 5px;
+}
+
+.passPhraseBoxContainer {
+    position: relative;
+}
+
+.pwReveal {
+    background-color: #666;
+    color: #666;
+    font-size: 4em;
+    font-weight: 700;
+    font-family: courier, sans-serif;
+    text-align: center;
+    margin: .1em 0;
+    padding: .2em 0;
+}
+
+    .pwReveal:hover {
+        background-color: transparent;
+        color: #000;
+    }
+
+.adsense {
+    margin-bottom: 1em;
+}
+
+.footer-icon {
+    text-align: center;
+}
+
+    .footer-icon .img-responsive {
+        margin: 0 auto;
+    }
+
+@media (max-width: 767px) {
+    h1 {
+    width: 99px;
+    height: 21px;
+    background-size: contain;
+}
+
+    h1 a {
+        display: block;
+        height: 21px;
+        width: 99px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .jumbotron p {
+        font-size: 15px;
+    }
+
+    .jumbotron {
+        padding: 0;
+    }
+
+    .quote {
+        font-size: 25px;
+    }
+
+    .blockquote-reverse {
+        page-break-inside: avoid;
+        padding-right: 0;
+        padding-left: 15px;
+        text-align: left;
+        border-right: 0;
+        border-left: 5px solid #eee;
+    }
+
+    dl {
+        width: 30%;
+    }
+
+    dt, dd, dl {
+        display: inline-block;
+    }
+
+    .pwReveal {
+        background-color: transparent;
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h2 {
+        font-size: 25px;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    .jumbotron p {
+        font-size: 15px;
+    }
+
+    .jumbotron {
+        padding: 0;
+    }
+
+    .quote {
+        font-size: 25px;
+    }
+
+    .blockquote-reverse {
+        page-break-inside: avoid;
+        padding-right: 0;
+        padding-left: 15px;
+        text-align: left;
+        border-right: 0;
+        border-left: 5px solid #eee;
+    }
+
+    .pwReveal {
+        background-color: transparent;
+    }
+
+    dl {
+        width: 19%;
+    }
+
+    dt, dd, dl {
+        display: inline-block;
+    }
+}

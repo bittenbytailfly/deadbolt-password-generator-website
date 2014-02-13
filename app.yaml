@@ -1,0 +1,18 @@
+application: deadbolt-password-generator
+version: db-bootstrap-001
+api_version: 1
+runtime: python
+
+default_expiration: "7d"
+
+handlers:
+- url: /(.*\.(gif|png|jpg|css|js|ico|xml))
+  static_files: static/\1
+  upload: static/(.*\.(gif|png|jpg|css|js|ico|xml))
+
+- url: /googleda51c33bed70f3e1.html
+  static_files: static/googleda51c33bed70f3e1.html
+  upload: static/googleda51c33bed70f3e1.html
+
+- url: /(.*)
+  script: controllers/deadbolt.py

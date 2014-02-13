@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Product">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Ed Carter">
+    <title>Deadbolt Password Generator</title>
+    <meta name="keywords" content="password generator, random password generator, secure password generator, generate password, good passwords, random password, good password, online password generator, generate random password, password generators" />
+    <meta name="description" content="Generate secure, strong passwords from a simple memorable pass phrase to enhance your Internet security and protect your privacy." />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/rss+xml" title="Deadbolt Password Generator Security Blog" href="http://blog.deadboltpasswordgenerator.com/feeds/posts/default?alt=rss" />
+    <link rel="canonical" href="http://www.deadboltpasswordgenerator.com" />
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/deadbolt.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <h1><a href="/"><span itemprop="name">Deadbolt Password Generator</span></a></h1>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron">
+        <div class="container">
+            <h2 itemprop="description">Turn <strong>memorable phrases</strong> into <strong>strong passwords</strong></h2>
+            <p>If you struggle to come up with unique, strong passwords or use the same password for everything then Deadbolt Password Generator is the solution you've been waiting for.</p>
+
+        </div>
+    </div>
+
+    <div class="container adsense">
+        <!-- Responsive Ad Unit -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9853312082400389"
+             data-ad-slot="5309390888"
+             data-ad-format="auto"></ins>
+    </div>
+
+    <div class="container">
+
+        <div class="well">
+
+            <div class="row">
+
+
+                <div class="col-md-3">
+                    <label>Options</label>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" data-bind="checked: showPassPhrase, enable: !passwordGenerated()"> Show Pass Phrase
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" data-bind="checked: includeSymbols, enable: !passwordGenerated()"> Include Symbols
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" data-bind="checked: caseSensitive, enable: !passwordGenerated()"> Case Sensitive
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <select data-bind="value: characters, enable: !passwordGenerated()">
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                </select>
+                                Characters
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" data-bind="checked: usePinNumber, enable: !passwordGenerated()"> Use PIN Number
+                                </label>
+                            </div>
+                            <div data-bind="visible: usePinNumber">
+                                <div class="pinNumber">
+                                    <select data-bind="value: pin1, enable: !passwordGenerated()">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                    </select>
+                                    <select data-bind="value: pin2, enable: !passwordGenerated()">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                    </select>
+                                    <select data-bind="value: pin3, enable: !passwordGenerated()">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                    </select>
+                                    <select data-bind="value: pin4, enable: !passwordGenerated()">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label for="memorablePhrase">Memorable phrase</label>
+                        <input type="text" class="form-control" id="memorablePhrase" data-bind="valueUpdate: 'afterkeydown', value: memorablePhrase, visible: showPassPhrase, enable: !passwordGenerated()" />
+                        <input type="password" class="form-control" id="memorablePhrase" data-bind="valueUpdate: 'afterkeydown', value: memorablePhrase, visible: !showPassPhrase(), enable: !passwordGenerated()" />
+                        <small class="muted" data-bind="html: remainingChars, visible: !minPhraseLengthMet()">Enter at least 6 characters</small>
+                    </div>
+                    <p>
+                        <button type="button" class="btn btn-primary" data-bind="visible: minPhraseLengthMet, click: generatePassword, enable: !passwordGenerated()">Generate Password</button>
+                        <button type="button" class="btn btn-danger" data-bind="visible: passwordGenerated(), click: clearPassword">Clear</button>
+                    </p>
+                    <div id="encodedPasswordContainer" data-bind="fadeVisible: passwordGenerated">
+                        <p class="hidden-sm hidden-xs">Run your mouse over the area below to display your secure password.</p>
+                        <p><span data-bind="text: encodedPassword" class="passChars pwReveal" onmouseover="viewModel.raiseRevealEvent('full')"></span></p>
+                        <p class="hidden-sm hidden-xs">Or you can see individual characters below.</p>
+                        <div class="passChars">
+                            <dl class="first"><dt>1</dt><dd data-bind="text: getPasswordCharacter(1)" class="pwReveal"></dd></dl>
+                            <dl><dt>2</dt><dd data-bind="text: getPasswordCharacter(2)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl><dt>3</dt><dd data-bind="text: getPasswordCharacter(3)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl><dt>4</dt><dd data-bind="text: getPasswordCharacter(4)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl><dt>5</dt><dd data-bind="text: getPasswordCharacter(5)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(6) != ''"><dt>6</dt><dd data-bind="text: getPasswordCharacter(6)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(7) != ''"><dt>7</dt><dd data-bind="text: getPasswordCharacter(7)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(8) != ''"><dt>8</dt><dd data-bind="text: getPasswordCharacter(8)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(9) != ''"><dt>9</dt><dd data-bind="text: getPasswordCharacter(9)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(10) != ''"><dt>10</dt><dd data-bind="text: getPasswordCharacter(10)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(11) != ''"><dt>11</dt><dd data-bind="text: getPasswordCharacter(11)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(12) != ''"><dt>12</dt><dd data-bind="text: getPasswordCharacter(12)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(13) != ''"><dt>13</dt><dd data-bind="text: getPasswordCharacter(13)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(14) != ''"><dt>14</dt><dd data-bind="text: getPasswordCharacter(14)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                            <dl data-bind="visible: getPasswordCharacter(15) != ''"><dt>15</dt><dd data-bind="text: getPasswordCharacter(15)" class="pwReveal" onmouseover="viewModel.raiseRevealEvent('char')"></dd></dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7 col-sm-6">
+                <h3>Now available for Google Chrome</h3>
+                <p>
+                    Deadbolt Password Generator is now available as a <a href="https://chrome.google.com/webstore/detail/deadbolt-password-generat/gmipahielflpaijgdkfailgmiloecolh" target="_blank">Chrome Extension</a> allowing you to generate a password without having to leave the page you're on.
+</p>
+                <p>You'll get all the same functionality but with the added bonus of being able to save custom password profiles, and directly copy passwords to the clipboard.</p>
+                <p class="hidden-sm hidden-xs">
+                    <a href="https://chrome.google.com/webstore/detail/deadbolt-password-generat/gmipahielflpaijgdkfailgmiloecolh" target="_blank">
+                        <img itemprop="image" src="/images/available-in-the-chrome-web-store.png" class="img-responsive" />
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-5 col-sm-6">
+                <img class="img-responsive img-rounded" src="/images/screenshot-home.png" alt="Deadbolt home screen">
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-5">
+                <blockquote class="quote blockquote-reverse"><span class="text-muted">The</span> same phrase <span class="text-muted">will always generate the</span> same password</blockquote>
+            </div>
+            <div class="col-md-7">
+                <h3>How does it work?</h3>
+                <p>
+                    On a very simple level, Deadbolt uses the numeric values of the characters used in your memorable phrase and puts those numbers through a series of calculations.
+                    The resulting numbers are then turned into your strong password. The calculations are deliberately inaccurate, losing information along the way to ensure they are irreversible, however the same phrase will always generate the same password.
+                </p>
+                <p>If you'd like a more detailed explanation, Deadbolt is open source and the code is avialable to view on <a href="https://github.com/bittenbytailfly/deadbolt-password-generator-chrome-extension" target="_blank">GitHub</a>.</p>
+            </div>
+
+        </div>
+        <hr />
+        <div class="row">
+
+            <div class="col-md-7">
+                <h3>What makes Deadbolt different to a password vault?</h3>
+                <p>
+                    Unlike 'password vaults', that store your all your passwords securely behind a master password, Deadbolt never stores or transmits any personal information whatsoever leaving you fully in control of your data.
+                </p>
+                <p>Since passwords are never stored, they only really exist between the time you generate them, until the time you've used them.</p>
+            </div>
+            <div class="col-md-5">
+                <blockquote class="quote">No personal information <span class="text-muted">is ever </span>stored or transmitted</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div class="container adsense">
+        <!-- Responsive Text Ad Unit -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9853312082400389"
+             data-ad-slot="8262857289"
+             data-ad-format="auto"></ins>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 hidden-xs">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-2 footer-icon"><p><img src="/images/qrcode.png" class="img-responsive img-rounded" /></p></div>
+                        <div class="col-md-9 col-sm-10">
+                            <h4>On the go</h4>
+                            <p>Deadbolt is fully mobile optimised and compatible with most smart phones.</p>
+                            <p>Scan the following code and bookmark it on your phone so you can access the site wherever you are.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-2 footer-icon">
+                        <p>
+                            <a href="https://github.com/bittenbytailfly/deadbolt-password-generator-chrome-extension" target="_blank">
+                                <img src="/images/github-mark-light-120px-plus.png" class="img-responsive img-rounded" />
+                            </a></p></div>
+                        <div class="col-md-9 col-sm-10">
+                            <h4>Feedback</h4>
+                            <p>If you'd like to know more about how Deadbolt works, want to file a bug report, or have some new feature requests, check out the repository on <a href="https://github.com/bittenbytailfly/deadbolt-password-generator-chrome-extension" target="_blank">GitHub</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-2 footer-icon">
+                            <p>
+                                <a href="//plus.google.com/110515526630987178798?prsrc=3"
+                                   rel="publisher" target="_top" style="text-decoration:none;">
+                                    <img src="//ssl.gstatic.com/images/icons/gplus-64.png" alt="Google+" style="border:0;width:64px;height:64px;" />
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-9 col-sm-10">
+                            <h4>Stay Informed</h4>
+                            <p>Follow Deadbolt on Google+ to keep up to date with the latest developments and security news.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="social-buttons">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <p>
+                        <div class="g-person" data-width="273" data-href="//plus.google.com/109880656819676198896" data-theme="dark" data-layout="landscape" data-showtagline="false" data-showcoverphoto="false" data-rel="author"></div>
+                    </p>
+                    <p>
+                        &copy; Copyright, Ed Carter 2009-{{ year }}
+                        <br />
+                        <a href="http://www.gnu.org/licenses/" target="_blank">GNU GENERAL PUBLIC LICENSE Version 3</a>
+                    </p>
+                </div><div class="col-md-4">
+                    <p>
+                        <div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://www.deadboltpasswordgenerator.com"></div>
+                        <br />
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.deadboltpasswordgenerator.com" data-via="bittenbytailfly">Tweet</a>
+                        <div id="fb-root"></div>
+                        <div class="fb-like" data-href="http://www.deadboltpasswordgenerator.com/" data-send="false" data-layout="button_count" data-show-faces="false"></div>
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="/js/knockout-3.0.0.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="/js/socialbuttons.js"></script>
+    <script src="/js/deadbolt.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="/js/deadbolt-ui.js"></script>
+</body>
+</html>
