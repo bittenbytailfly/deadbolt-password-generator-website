@@ -19,9 +19,16 @@ class RedirectToIndex(webapp.RequestHandler):
     def get(self):
         self.redirect('/', permanent=True)
 
-application = webapp.WSGIApplication(
-                                [('/', Index), 
-                                 (r'/(.*)', RedirectToIndex)])
+class NotFoundPageHandler(webapp.RequestHandler):
+    def get(self):
+        self.error(404)
+        self.response.out.write('Page not found!')
+
+application = webapp.WSGIApplication([
+								 ('/', Index), 
+                                 (r'/faq', RedirectToIndex),
+								 ('/.*', NotFoundPageHandler) 
+								 ])
 
 def main():
     run_wsgi_app(application)
