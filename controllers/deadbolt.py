@@ -15,6 +15,11 @@ class Index(webapp.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), '../views/index.htm')
         self.response.out.write(template.render(path, template_values))
 
+class Licensing(webapp.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), '../views/licensing.htm')
+        self.response.out.write(template.render(path, template_values))
+
 class RedirectToIndex(webapp.RequestHandler):
     def get(self):
         self.redirect('/', permanent=True)
@@ -25,7 +30,8 @@ class NotFoundPageHandler(webapp.RequestHandler):
         self.response.out.write('Page not found!')
 
 application = webapp.WSGIApplication([
-								 ('/', Index), 
+								 ('/', Index),
+								 ('/license-information', Licensing),
                                  (r'/faq', RedirectToIndex),
 								 ('/.*', NotFoundPageHandler) 
 								 ])
