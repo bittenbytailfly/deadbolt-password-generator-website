@@ -1,5 +1,5 @@
 application: deadbolt-password-generator
-version: db-bootstrap-001
+version: db-bootstrap-002
 api_version: 1
 runtime: python
 
