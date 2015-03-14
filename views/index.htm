@@ -62,11 +62,19 @@
 
             <div class="row">
 
-
                 <div class="col-md-3">
                     <label>Options</label>
                     <div class="panel panel-default">
                         <div class="panel-body">
+
+                            <div class="form-group">
+                                <label for="encodeEngine">Encoding Algorihm</label>
+                                <select id="encodeEngine" data-bind="options: encodeEngines,
+                                   optionsText: 'name',
+                                   optionsValue: 'id',
+                                   value: selectedEngineId,
+                                   enable: !passwordGenerated()"></select>
+                            </div>
 
                             <div class="checkbox">
                                 <label>
