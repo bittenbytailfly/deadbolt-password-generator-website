@@ -1,5 +1,8 @@
-﻿function deadboltPasswordGenerator() {
+﻿function deadboltPasswordGeneratorViewModel() {
     var self = this;
+
+    self.encodeEngines = deadboltPasswordGenerator.getAvailableEngines();
+    self.selectedEngineId = ko.observable(0);
     self.minimumPhraseLength = 6;
     self.showPassPhrase = ko.observable(false);
     self.includeSymbols = ko.observable(true);
@@ -14,7 +17,16 @@
     self.memorablePhrase = ko.observable('');
 
     self.generatePassword = function () {
-        self.encodedPassword(encodePassword(self.memorablePhrase(), self.pinNumber(), self.includeSymbols(), self.caseSensitive(), self.characters()));
+        self.encodedPassword(deadboltPasswordGenerator.encodePassword(
+            self.memorablePhrase(),
+            {
+                engineId: self.selectedEngineId(),
+                pin: self.pinNumber(),
+                useSpecial: self.includeSymbols(),
+                caseSensitive: self.caseSensitive(),
+                passwordLength: self.characters()
+            })
+        );
     };
 
     self.minPhraseLengthMet = ko.computed(function () {
@@ -83,5 +95,5 @@ ko.bindingHandlers.fadeVisible = {
 };
 
 
-var viewModel = new deadboltPasswordGenerator();
+var viewModel = new deadboltPasswordGeneratorViewModel();
 ko.applyBindings(viewModel);
