@@ -1,7 +1,8 @@
-application: deadbolt-password-generator
+application: deadbolt-password-generato-hrd
 version: db-bootstrap-hyzenthlay
 api_version: 1
-runtime: python
+runtime: python27
+threadsafe: yes
 
 default_expiration: "7d"
 
@@ -15,4 +16,8 @@ handlers:
   upload: static/googleda51c33bed70f3e1.html
 
 - url: /(.*)
-  script: controllers/deadbolt.py
+  script: controllers.deadbolt.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
