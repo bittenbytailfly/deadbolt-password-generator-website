@@ -2,3 +2,5 @@
 ######################
 .c9revisions
 static/images/Thumbs.db
+.idea/
+*.pyc
