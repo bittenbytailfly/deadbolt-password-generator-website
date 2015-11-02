@@ -1,5 +1,5 @@
 application: deadbolt-password-generato-hrd
-version: db-bootstrap-hyzenthlay
+version: db-bootstrap-hyzenthlay-02
 api_version: 1
 runtime: python27
 threadsafe: yes
