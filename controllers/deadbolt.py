@@ -23,6 +23,11 @@ class Licensing(webapp2.RequestHandler):
         path = os.path.join(os.path.dirname(__file__), '../views/licensing.htm')
         self.response.out.write(template.render(path, template_values))
 
+class PrivacyPolicy(webapp2.RequestHandler):
+    def get(self):
+        path = os.path.join(os.path.dirname(__file__), '../views/privacy-policy.htm')
+        self.response.out.write(template.render(path, template_values))
+
 
 class RedirectToIndex(webapp2.RequestHandler):
     def get(self):
@@ -36,6 +41,7 @@ class NotFoundPageHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([(r'/', Index),
                                (r'/license-information', Licensing),
+							   (r'/privacy-policy', PrivacyPolicy),
                                (r'/faq', RedirectToIndex),
                                (r'/.*', NotFoundPageHandler)],
                                debug=False)
